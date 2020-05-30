@@ -28,6 +28,21 @@ public class SysUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    public SysUser() {}
+
+    public SysUser(Long userId, String username, String password, String salt, String email,
+                   String mobile, Integer status, Long createUserId, LocalDateTime createTime) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
+        this.salt = salt;
+        this.email = email;
+        this.mobile = mobile;
+        this.status = status;
+        this.createUserId = createUserId;
+        this.createTime = createTime;
+    }
+
     @TableId(value = "user_id", type = IdType.AUTO)
     private Long userId;
 
